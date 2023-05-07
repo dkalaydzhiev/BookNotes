@@ -1,0 +1,55 @@
+Chapter 1:
+
+Tips for Refactoring in General:
+
+1. When you find you have to add a feature to a program, and the program's code is not structured in a convenient way to add the feature, first refactor the program to make it easy to add the feature, then add the feature.
+
+2.Before you start refactoring, check that you have a solid suite of tests. These tests must be self-checking.
+
+Decomposing and Redistributing Large Methods:
+
+1st step -> Extract Methods
+Thinks to take into consideration:
+	* Care about local variables that get modified in the method we want to extract.
+		* If it's only one we can return it
+		* If it's not modified it can be passed as a parameter
+
+After every change we compile and run the tests.
+
+Refactoring changes the programs in small steps. If you make a mistake, it is easy to find the bug.
+
+After breaking the code into smaller pieces we can work on them separately.
+
+Renaming is worth the effort. Good code should communicate what it is doing clearly, and variable names are a key to clear code.
+
+2nd step -> Move Method:
+
+In most cases a method should be on the object whose data it uses, thus the method should be moved to the object which data it's using.
+
+Sometimes when moving a method we might leave the old method to delegate to the new method. This is useful if it is a public method and we don't want to change the interface of the other class.
+
+3rd step -> Replace Temp with Query
+
+It's good to get rid of temps as much as possible.
+
+Disadvantages:
+
+	* Temps are often a problem in that they cause a lot of parameters to be passed around when they don't have to be.
+
+	* You can easily lose track of what they are there for.
+
+	* They are particularly insidious in long methods.
+
+Advantages:
+
+	* There is a performance price to pay; 
+		* Often temps are there for calling a method only once and setting its value to them, 				so we do not need to call the method once more.
+
+This can be optimised, when the code is properly refactored. (There is a Chapter for this later)
+
+Not every refactoring will reduce the amount of code. Some may even increase it. But this can make the code more reusable, which will save you writing more code in the long run. This also will help, when reusing the code and you need to change, you will change it in only one place.
+
+4th step -> Replacing Conditional Logic with Polymorphism
+
+
+
