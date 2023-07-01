@@ -1,0 +1,45 @@
+Preface:
+	1. Red - Write a little test that doesn't work, and perhaps doesn't even compile at first.
+	2. Green - Make the test work quickly, committing whatever sins necessary in the process.
+	3. Refactor - Eliminate all of the duplication created in merely getting the test to work.
+	Red/green/refactor - the TDD mantra.
+
+Introduction:
+	Several factors come into play when introducing a new large functionality: Motive, Method and 	Opportunity
+	You can't control whether you ever get the motive to multiply the value of your project by
+	spinning technical magic. Method and opportunity, on the other hand, are entirely under your
+	control.
+
+Example 1: Multi Currency
+	The goal is for you to see the rhythm of Test-Driven Development (TDD), which can be summed 	up as follows.
+	1. Quickly add a test.
+	2. Run all tests and see the new one fail.
+	3. Make a little change.
+	4. Run all tests and see them all succeed.
+	5. Refactor to remove duplication.
+
+	The surprises are likely to include
+	1. How each test can cover a small increment of functionality
+	2. How small and ugly the changes can be to make the new tests run
+	3. How often the tests are run
+	4. How many teensy-weensy steps make up the refactorings
+	
+Chapter 1: Multi Currency Money
+	When preparing to code a new functionality we need to ask ourselves what set of tests,
+	when passed, will demonstrate the presence of code we are confident will show the new 
+	functionality is working correctly
+	1. Make a to-do list to keep us focused and to tell us when we are finished
+	2. Bold the test we are currently working on
+	3. Scratch of the test when it passes
+	4. In the mean time if we think of another test we can add it to the list.
+	
+	Now we always start with the tests, even if we don't have any foundation. And always start small.
+	When we write a test, we imagine the perfect interface for our operation. We won't always be able to use the best-possible 	solution, but it's always better to start from it and work backward than to make things complicated ugly and "realistic" from 	the get-go
+	When we run the tests they are not even compiling. This is pretty easy to fix. Just follow the errors and create everything 	needed. When we fix every compilation error we can see that now our test is failing. Failure is progress! Now we have a 	concrete measure of failure. Our big new functionality problem has been transformed from "give me this new big functionality" 	to make this test work and make the rest of the tests work. Much simpler. Much smaller scope for fear.
+	Now we need to make the smallest change in order to make the test work even if it's exactly how the code should work.
+	Now the test works! But we shouldn't forget the cycle.
+	1. Add a little test.
+	2. Run all tests and fail.
+	3. Make a little change.
+	4. Run the tests and succeed.
+	5. Refactor to remove duplication.
